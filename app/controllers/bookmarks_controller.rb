@@ -20,6 +20,18 @@ class BookmarksController < ApplicationController
 	end
 
 
+	def edit
+		@bookmark=Bookmark.find(params[:id])
+		
+	end
+
+	def update
+		@bookmark=Bookmark.find(params[:id])
+		@bookmark.update_attributes(bookmark_params)
+		redirect_to action: :index
+	end
+
+
 	private
 	def bookmark_params
 		#binding.pry
