@@ -31,6 +31,11 @@ class BookmarksController < ApplicationController
 		redirect_to action: :index
 	end
 
+	def show
+		@bookmark=Bookmark.find(params[:id])
+	end
+
+
 
 	private
 	def bookmark_params
