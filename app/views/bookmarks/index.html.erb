@@ -5,6 +5,7 @@
 		<li>
 			<% if bookmark.favorite %>*	<% end %>
 			<%= link_to bookmark.title, bookmark.url %>	
+			<%= link_to "Delete", bookmark_path(bookmark), method: :delete%>	
 		</li>
 	<% end %>
 
